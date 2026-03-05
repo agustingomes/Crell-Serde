@@ -20,6 +20,7 @@ jobs:
               with:
                   php-version: ${{ matrix.php }}
                   coverage: xdebug
+                  ini-values: error_reporting=E_ALL
                   tools: composer:v2
             - run: composer install --no-progress ${{ matrix.composer-flags }}
             - run: vendor/bin/phpunit ${{ matrix.phpunit-flags }}
