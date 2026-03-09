@@ -236,7 +236,7 @@ trait ArrayBasedDeformatter
             first(static fn (string $name): bool => isset($decoded[$name]))
         );
 
-        if (!array_key_exists($key, $decoded)) {
+        if ($key === null || !array_key_exists($key, $decoded)) {
             return DeformatterResult::Missing;
         }
 
