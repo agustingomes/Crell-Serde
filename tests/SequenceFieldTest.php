@@ -6,12 +6,13 @@ namespace Crell\Serde;
 
 use Crell\Serde\Attributes\SequenceField;
 use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Small;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
+#[Small]
 class SequenceFieldTest extends TestCase
 {
-
     /**
      * @param string[] $expected
      */

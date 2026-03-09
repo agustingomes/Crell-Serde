@@ -6,9 +6,11 @@ namespace Crell\Serde;
 
 use Crell\Serde\Renaming\Cases;
 use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Small;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
+#[Small]
 class CasesTest extends TestCase
 {
     /**

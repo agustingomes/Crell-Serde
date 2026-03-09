@@ -11,9 +11,11 @@ use Crell\Serde\Records\CsvTableLazy;
 use Crell\Serde\Records\Point;
 use Crell\Serde\Records\PointList;
 use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
+#[Group('csv')]
 class CsvFormatterTest extends TestCase
 {
     #[Test, DataProvider('csvExamples')]

@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace Crell\Serde;
 
 use Crell\Serde\Formatter\JsonFormatter;
+use PHPUnit\Framework\Attributes\Group;
 
+#[Group('json')]
 class JsonFormatterTest extends ArrayBasedFormatterTestCases
 {
     public function setUp(): void

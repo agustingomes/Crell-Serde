@@ -27,9 +27,11 @@ use Crell\Serde\Records\Point;
 use Crell\Serde\Records\Size;
 use Crell\Serde\Records\Visibility;
 use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
+#[Group('json-stream')]
 class JsonStreamFormatterTest extends TestCase
 {
     #[Test, DataProvider('streamExamples')]

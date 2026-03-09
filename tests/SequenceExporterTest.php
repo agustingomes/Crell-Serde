@@ -9,9 +9,11 @@ use Crell\Serde\Attributes\Field;
 use Crell\Serde\Attributes\SequenceField;
 use Crell\Serde\PropertyHandler\SequenceExporter;
 use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Small;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
+#[Small]
 class SequenceExporterTest extends TestCase
 {
     #[Test, DataProvider('canExportExamples')]
