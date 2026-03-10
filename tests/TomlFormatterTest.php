@@ -9,6 +9,7 @@ use Crell\Serde\Records\NullArrays;
 use Crell\Serde\Records\Pagination\Product;
 use Devium\Toml\Toml;
 use Crell\Serde\Formatter\TomlFormatter;
+use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Test;
@@ -16,10 +17,9 @@ use PHPUnit\Framework\Attributes\Test;
 #[Group('toml')]
 class TomlFormatterTest extends ArrayBasedFormatterTestCases
 {
-    public function setUp(): void
+    #[Before]
+    public function setupFormatter(): void
     {
-        parent::setUp();
-
         $this->formatters = [new TomlFormatter()];
         $this->format = 'toml';
         $this->emptyData = '';

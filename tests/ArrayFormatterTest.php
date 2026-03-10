@@ -9,6 +9,7 @@ use Crell\Serde\PropertyHandler\EnumOnArrayImporter;
 use Crell\Serde\Records\BackedSize;
 use Crell\Serde\Records\LiteralEnums;
 use Crell\Serde\Records\Size;
+use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Medium;
 use PHPUnit\Framework\Attributes\Test;
@@ -17,9 +18,9 @@ use PHPUnit\Framework\Attributes\Test;
 #[Medium]
 class ArrayFormatterTest extends ArrayBasedFormatterTestCases
 {
-    public function setUp(): void
+    #[Before]
+    public function setupFormatter(): void
     {
-        parent::setUp();
         $this->formatters = [new ArrayFormatter()];
         $this->format = 'array';
         $this->emptyData = [];

@@ -18,8 +18,6 @@ use PHPUnit\Framework\Attributes\Test;
 
 abstract class ArrayBasedFormatterTestCases extends SerdeTestCases
 {
-    abstract protected function arrayify(mixed $serialized): array;
-
     protected function point_validate(mixed $serialized): void
     {
         $toTest = $this->arrayify($serialized);

@@ -5,15 +5,16 @@ declare(strict_types=1);
 namespace Crell\Serde;
 
 use Crell\Serde\Formatter\YamlFormatter;
+use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\Attributes\Group;
 use Symfony\Component\Yaml\Yaml;
 
 #[Group('yaml')]
 class YamlFormatterTest extends ArrayBasedFormatterTestCases
 {
-    public function setUp(): void
+    #[Before]
+    public function setupFormatter(): void
     {
-        parent::setUp();
         $this->formatters = [new YamlFormatter()];
         $this->format = 'yaml';
         $this->emptyData = '{}';
