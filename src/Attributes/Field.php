@@ -239,7 +239,7 @@ class Field implements FromReflectionProperty, HasSubAttributes, Excludable, Sup
         // If there is no requireValue flag set, inherit it from the class attribute.
         $this->requireValue ??= $class->requireValues;
         $this->rename ??= $class->renameWith ?? null;
-        $this->omitIfNull ??= $class->omitNullFields ?? false;
+        $this->omitIfNull ??= $class->omitNullFields;
     }
 
     protected function getDefaultValueFromConstructor(\ReflectionProperty $subject): mixed
