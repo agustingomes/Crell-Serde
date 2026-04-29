@@ -7,8 +7,9 @@ namespace Crell\Serde;
 use Crell\Serde\Formatter\JsonFormatter;
 use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\Medium;
 
-#[Group('json')]
+#[Group('json'), Medium]
 class JsonFormatterTest extends ArrayBasedFormatterTestCases
 {
     #[Before]

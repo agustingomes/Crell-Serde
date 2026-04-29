@@ -7,9 +7,10 @@ namespace Crell\Serde;
 use Crell\Serde\Formatter\YamlFormatter;
 use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\Medium;
 use Symfony\Component\Yaml\Yaml;
 
-#[Group('yaml')]
+#[Group('yaml'), Medium]
 class YamlFormatterTest extends ArrayBasedFormatterTestCases
 {
     #[Before]

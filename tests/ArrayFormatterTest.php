@@ -14,8 +14,7 @@ use PHPUnit\Framework\Attributes\Group;
 use PHPUnit\Framework\Attributes\Medium;
 use PHPUnit\Framework\Attributes\Test;
 
-#[Group('array')]
-#[Medium]
+#[Group('array'), Medium]
 class ArrayFormatterTest extends ArrayBasedFormatterTestCases
 {
     #[Before]

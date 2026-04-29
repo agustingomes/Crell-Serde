@@ -14,10 +14,11 @@ use Crell\Serde\Records\Point;
 use Crell\Serde\Records\PointList;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\Medium;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
-#[Group('csv-stream')]
+#[Group('csv-stream'), Medium]
 class CsvStreamFormatterTest extends TestCase
 {
     #[Test, DataProvider('csvExamples')]

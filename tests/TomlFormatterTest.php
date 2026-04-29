@@ -12,9 +12,10 @@ use Crell\Serde\Formatter\TomlFormatter;
 use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\Medium;
 use PHPUnit\Framework\Attributes\Test;
 
-#[Group('toml')]
+#[Group('toml'), Medium]
 class TomlFormatterTest extends ArrayBasedFormatterTestCases
 {
     #[Before]
