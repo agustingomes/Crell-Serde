@@ -54,7 +54,6 @@ class EnumExporter implements Exporter, Importer
             // @phpstan-ignore-next-line
             TypeCategory::UnitEnum => (new ReflectionEnum($field->phpType))->getCase($val)->getValue(),
             TypeCategory::IntEnum, TypeCategory::StringEnum => $field->phpType::from($val),
-            default => throw TypeMismatch::create($field->phpName, $field->phpType, get_debug_type($source)),
         };
     }
 
